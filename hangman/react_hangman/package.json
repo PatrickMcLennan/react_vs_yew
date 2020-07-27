@@ -1,0 +1,35 @@
+{
+  "name": "react_hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.common.js",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.26",
+    "@swc/core": "^1.2.9",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "style-loader": "^1.2.1",
+    "swc-loader": "^0.1.12",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
+  },
+  "scripts": {
+    "watch": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack-dev-server --config webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

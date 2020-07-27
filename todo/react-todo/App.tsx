@@ -24,10 +24,11 @@ function App(): JSX.Element {
       : setState((prevState) => ({ ...prevState, input: ``, tasks: [...prevState.tasks, state.input], error: false }));
   };
 
-  const removeAllTasks: () => void = () => setState(prevState => ({
+  const removeAllTasks: () => void = () =>
+    setState((prevState) => ({
       ...prevState,
-      tasks: []
-  }));
+      tasks: [],
+    }));
 
   const removeTask: (i: number) => void = (badIndex: number) =>
     setState((prevState) => ({
@@ -68,8 +69,12 @@ function App(): JSX.Element {
             </button>
           </li>
         ))}
-        {state.tasks.length >= 1 && <button className="delete-all" onClick={removeAllTasks}>Delete All</button>}
       </ul>
+      {state.tasks.length >= 1 && (
+        <button className="delete-all" onClick={removeAllTasks}>
+          Delete All
+        </button>
+      )}
     </div>
   );
 }
