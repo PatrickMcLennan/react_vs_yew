@@ -79,7 +79,7 @@ impl Component for Model {
     fn view(&self) -> Html {
         html! {
           <div class="background">
-            <form class="form" onsubmit={self.link.callback(|e| {e.prevent_default(); Msg::AddTask})}>
+            <form class="form" onsubmit={self.link.callback(|e: SubmitEvent| Msg::AddTask)}>
               <label class={if self.state.error { "label-error" } else { "label" }} htmlFor="task">
                 <span class="span">
                   {"Enter your Task:"} <sup>{"*"}</sup>
